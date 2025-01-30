@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Cache-Control" content="no-cache">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <link rel="apple-touch-icon" href="logo.png">
+        <link rel="icon" href="logo.png">
+
+        <title>Group 10 Round 1 Website</title>
+        <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Webgl Fluid Simulation">
+        <meta property="og:description" content="A WebGL fluid simulation that works in mobile browsers.">
+        <meta property="og:url" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">
+        <meta property="og:image" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/logo.png">
+        <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript" src="dat.gui.min.js"></script>
+        
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'UA-105392568-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+    </head>
+    
+    <body>
+
+        <!-- Canvas for rendering WebGL simulation -->
+        <canvas></canvas>
+
+        <!-- ---Promotional Section--- -->
+        <div class="promo">
+            <div class="promo-middle">
+                <div class="promo-content">
+                    <div class="promo-header">
+                        <span class="promo-close">&times;</span>
+                    </div>
+                    <div class="promo-body">
+                        <div class="links-container">
+                            <a class="link" id="apple_link" target="_blank">
+                                <img class="link-img" />
+                            </a>
+                            <a class="link" id="google_link" target="_blank">
+                                <img class="link-img"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---Navbar--- -->
+        <header class="header-bg">
+            <nav class="navbar">
+                <div class="navbar-logo">IAD</div>
+                <button class="toggle-button" id="toggle-button">☰</button> <!-- Toggle button for mobile -->
+                <ul class="navlist" id="navlist">
+                    <li><a href="#about-us" class="navlinks">About Us</a></li>
+                    <li><a href="#tech-stack" class="navlinks">Tech Stack</a></li>
+                    <li><a href="#challenge" class="navlinks">Challenge Selection</a></li>
+                    <li><a href="#innovation" class="navlinks">Innovation</a></li>
+                    <li><a href="#learning-video" class="navlinks">Learn CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Content Container -->
+        <div class="container">
+            <h1><strong>Lab Session Challenge</strong></h1>
+            <p>Delve into the highlights of Week 03's lab session from the IAD course, orchestrated under the guidance of Miss Humaira Tariq.</p>
+            
+            <!-- About Us -->
+            <h2 id="about-us">About Us</h2>
+            <h3>Group 10:</h3>
+            <p>We are a team of passionate computer science students from Group 10. Together, we tackled and successfully overcame the challenges posed during our lab sessions, engaging in healthy competition with other teams to hone our skills and deepen our understanding of complex concepts.</p>
+            <h3>Group Members</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Seat Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ally Abdullah</td>
+                        <td>B21110006015</td>
+                    </tr>
+                    <tr>
+                        <td>Bismah Nasir</td>
+                        <td>B21110006023</td>
+                    </tr>
+                    <tr>
+                        <td>Sadaqat Zia</td>
+                        <td>B21110006110</td>
+                    </tr>
+                    <tr>
+                        <td>Saher Hussain</td>
+                        <td>B21110006112</td>
+                    </tr>
+                    <tr>
+                        <td>Taha Zaheer</td>
+                        <td>B21110006152</td>
+                    </tr>
+                    <tr>
+                        <td>Ahmed Hashmi</td>
+                        <td>B22110004010</td>
+                    </tr>
+                    <tr>
+                        <td>Junaid Khalid</td>
+                        <td>B22110004005</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Tech Stack -->
+            <h2 id="tech-stack">Tech-Stack of Lab Session</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <div class="tech-logo-container">
+                        <div class="white-box"></div>
+                        <img src="html.png" alt="HTML Logo">
+                    </div>
+                    
+                    <p>HTML</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo-container">
+                        <div class="white-box"></div>
+                        <img src="css.png" alt="CSS Logo">
+                    </div>
+                    
+                    <p>CSS</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-logo-container">
+                        <div class="white-box"></div>
+                        <img src="js.png" alt="JavaScript Logo">
+                    </div>
+                    
+                    <p>JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Challenge Selection -->
+            <h2 id="challenge">Challenge Selected for Group 1 (4.23)</h2>
+
+            <h3>Challenge:</h3>
+            <p>Consider a two-player game played with pegs of six different colors. One player (the encrypter) selects four pegs of different colors and places them in a certain order. The other player (the decrypter) guesses the order to uncover the hidden code, guided by feedback using black and white pegs. The challenge involves writing a JavaScript program that simulates this encryption-decryption game, enhancing logical thinking and problem-solving skills.</p>
+            
+            <h3>Justification:</h3>
+            <p>This challenge was an excellent choice for Group 1 as it required the integration of complex logic and strategic thinking, skills essential for computer science students. By designing and implementing a game that simulates cryptographic principles, participants improved their programming prowess and problem-solving capabilities. This experience not only deepened their understanding of JavaScript but also fostered a practical application of encryption and decryption methodologies, which are pivotal in real-world computer science scenarios.</p>
+            
+            <h3>Group 10 Assigned Problem (3.25) Understanding:</h3>
+            <p>The CSS 'fixed' positioning is a powerful feature that anchors an element to a specific position relative to the viewport, regardless of scrolling. This property is particularly useful for creating persistently visible elements like navigation bars or floating action buttons. Testing across browsers reveals its broad support, although issues may arise in older versions like IE6, highlighting the importance of cross-browser compatibility testing.</p>
+            <img src="3.25-diagram.jpeg" alt="Diagram of CSS fixed positioning">
+            
+            <h3>Group 1 Assigned Problem (4.23) Understanding:</h3>
+            <p>This simulation of an encryption-decryption game using pegs of different colors not only tests but significantly enhances the player's problem-solving and logical thinking skills. By engaging in this game, players learn to strategize based on the feedback given, which mimics real-world scenarios where decisions are made based on partial information. This exercise was particularly beneficial in sharpening the participants' abilities to analyze and deduce under constraints.</p>
+            
+            <h2>How we completed the Challenge</h2>
+            <img src="group-10-challenge.jpeg" alt="CSS fixed positioning">
+            <p>To address the challenge, we applied 'fixed' positioning to the navbar of our website, demonstrating a practical use of CSS positioning. This technique allowed us to illustrate the contrasting behaviors between 'static' and 'fixed' positioning. With 'fixed' positioning, the navbar remains consistently visible at the top of the viewport as users scroll through the page, enhancing usability and accessibility. In contrast, 'static' positioning would leave the navbar at its original location in the document flow, disappearing from view as the user scrolls down. This experiment not only met the challenge requirements but also showcased how strategic CSS styling can influence user experience and interface dynamics.</p>
+            
+            <div class="flow-diagram-section">
+                <div class="flow-text">
+                    <h2>Explanation of the Flow</h2>
+                    <ul>
+                        <li><strong>Start:</strong> The user loads the webpage.</li>
+                        <li><strong>HTML Loads:</strong>
+                            <ul>
+                                <li>CSS is linked (style.css).</li>
+                                <li>The fixed navbar appears at the top.</li>
+                                <li>Content sections are loaded (Home, About, Services, Contact).</li>
+                            </ul>
+                        </li>
+                        <li><strong>CSS Loads:</strong>
+                            <ul>
+                                <li>Styling applies from style.css.</li>
+                                <li>Smooth scrolling applies to anchor links.</li>
+                                <li>Transitions and hover effects enhance navigation.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Scrolling & Interactions:</strong>
+                            <ul>
+                                <li>Navbar links trigger smooth scroll.</li>
+                                <li>Buttons have hover effects.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Footer Section:</strong> Displays copyright notice.</li>
+                        <li><strong>Background Image Check (Optional):</strong>
+                            <ul>
+                                <li>Flask ensures correct background image serving.</li>
+                                <li>Ensures the background image loads properly.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Final Rendering:</strong> The page is displayed correctly.</li>
+                        <li><strong>End:</strong> The webpage is fully interactive.</li>
+                    </ul>
+                </div>
+                <div class="flow-image">
+                    <a href="group-10-flowchart.png" target="_blank">
+                        <img src="group-10-flowchart.png" alt="Flow Diagram">
+                    </a>
+                </div>
+            </div>
+
+            <h2>How Group 1 completed the Challenge</h2>
+            <img src="group-1-challenge-1.jpeg" alt="4.23">
+            <img src="group-1-challenge-2.jpeg" alt="4.23">
+            <img src="group-1-challenge-3.jpeg" alt="4.23">
+            <p>Group 1 developed The Time Bomb Defusal game is an engaging and interactive project that combines problem-solving with an exciting user interface. Designed as a two-player logic challenge, the game tasks players with decoding a secret code while simulating the high-stakes experience of defusing a bomb. Featuring multiple difficulty levels, intuitive visual cues, and dynamic gameplay, this project highlights the creative application of programming concepts. The UI, inspired by a time bomb interface, includes elements like a keypad, LED indicators, and a tension-filled timer to immerse players in the experience. This game not only demonstrates technical skills in HTML, CSS, and JavaScript but also showcases an innovative approach to making learning fun and interactive.</p>
+            
+            <div class="group-experience">
+                <h2>Group 10 Lab Experience</h2>
+                <h3>Taha Zaheer (Group Leader)</h3>
+                <p>As the leader of B-G10, the lab experience was a rigorous yet rewarding test of problem-solving and adaptability. The challenge of resolving the fixed positioning issue of a navigation bar proved to be a formidable task, demanding both technical precision and strategic thinking. Engaging with the opposing team—who displayed undeniable technical prowess—fostered a competitive yet enriching environment. However, this experience underscored a crucial realization: a well-executed presentation can be the key to success, even in the face of complex challenges. Under pressure, our team exhibited resilience and adaptability, qualities that are indispensable in professional settings. Beyond the technical aspects, the sportsmanship displayed by our competitors and the lighthearted banter exchanged between teams added a layer of camaraderie that bolstered our confidence. While this session has concluded, it serves as both a lesson and a motivation—we are committed to refining our skills and returning stronger, ready to exceed expectations.</p>
+                <h3>Sadaqat Zia</h3>
+                <p>In BSCS 633, my role centered on diagnosing and solving the technical issue of a navigation bar's fixed positioning, which served as a practical lesson in adapting web development principles to real-world applications. This task required not only technical skill but also strategic thinking about potential use cases, such as improving user interface navigability and enhancing site functionality. The challenge fostered a competitive yet enriching environment, emphasizing the importance of clear communication and presentation in showcasing the relevance and impact of our solutions. This experience reinforced my skills in problem-solving and adaptability, crucial for professional growth and success.</p>
+                <h3>Bismah Nasirh</h3>
+                <p>For me, participating in the BSCS 633 challenge as a member of Team BG10 was a truly beneficial experience. Every stage, from choosing a problem to presenting our answer and participating in the Q&A session, offered a chance to develop and learn. Working with my team was pleasant. The challenge tested not only our technical understanding but also our ability to communicate and defend our ideas under pressure. It was a rewarding experience, and I feel that it has strengthened both my problem-solving skills and teamwork abilities.</p>
+                <h3>Saher Hussain</h3>
+                <p>In the Week 3 lab session, I participated as a member of Group 10, where we engaged in a challenge exchange with Group 1. The challenge we assigned to Group 1 involved a two-player encryption-decryption game using colored pegs, requiring logical thinking and problem-solving skills. This session was a great opportunity to test our understanding of the concepts covered in the book, enhance teamwork, and improve our problem-solving abilities. I had a great learning experience in this session, especially seeing how Group 1 creatively presented their problem. Their bomb defusal game webpage scenario made the concept engaging and interactive.</p>
+                <h3>Ally Abdullah</h3>
+                <p>In BSCS 633, as a member of team B-G10, I leveraged my web development expertise to help design and present solutions to complex problems, concentrating particularly on web architecture. This role highlighted the importance of teamwork, meticulous planning, and effective communication in overcoming intricate technical obstacles.</p>
+                <h3>Junaid Khalid</h3>
+                <p>During BSCS 633, I applied my web development skills as part of team B-G10, where I contributed to developing and presenting our problem solutions, with a strong focus on web architecture. This experience emphasized the value of collaboration, thorough preparation, and clear communication in tackling complex technical challenges.</p>
+            </div>
+            
+            <!-- Innovation -->
+            <h2 id="innovation">Innovation</h2>
+            <p>The challenges faced by Group 10 were not just tasks to be completed, but opportunities that propelled us towards innovative solutions. By navigating the complex requirements of the fixed positioning in CSS and developing a decryption game in JavaScript, our team was encouraged to think creatively and outside the conventional frameworks. These exercises enhanced our ability to approach problems from unique angles, leading to the development of novel strategies and solutions. Such experiences are crucial in fostering an innovative mindset, preparing us to tackle real-world issues with a fresh perspective and dynamic approach.</p>
+            
+            <!-- Learn Css -->
+            <h2 id="learning-video">Learn About CSS Position Property from this Short YouTube Video</h2>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YEmdHbQBCSQ?si=cZ62p9ayudH8PUXN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
