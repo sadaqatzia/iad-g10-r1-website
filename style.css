@@ -427,3 +427,11 @@ tr:hover {
 .group-experience p{
     text-align: left;
 }
+@media (max-width: 1100px){
+    .flow-diagram-section{
+        flex-direction: column;
+    }
+    .flow-text, .flow-image{
+        width: 100%;
+    }
+}
