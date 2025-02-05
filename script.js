@@ -43,6 +43,32 @@ promoPopupClose.addEventListener('click', e => {
     promoPopup.style.display = 'none';
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    function addMobileHeading() {
+        let flowImage = document.querySelector(".flow-image");
+        let existingHeading = document.querySelector(".mobile-heading");
+
+        if (window.innerWidth <= 768) {
+            if (!existingHeading) {
+                let mobileHeading = document.createElement("h2");
+                mobileHeading.innerText = "Flow Diagram";
+                mobileHeading.classList.add("mobile-heading");
+                flowImage.prepend(mobileHeading); // Insert heading above image
+            }
+        } else {
+            if (existingHeading) {
+                existingHeading.remove(); // Remove heading on larger screens
+            }
+        }
+    }
+
+    // Run on load
+    addMobileHeading();
+
+    // Run on window resize
+    window.addEventListener("resize", addMobileHeading);
+});
+
 const appleLink = document.getElementById('apple_link');
 appleLink.addEventListener('click', e => {
     ga('send', 'event', 'link promo', 'app');
