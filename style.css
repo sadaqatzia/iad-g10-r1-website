@@ -254,10 +254,14 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    /* font-size: 18px; */
     color: #262424;
     line-height: 1.6;
-    text-align: center; /* Centered paragraph */
+    /* text-align: center;  */
+    text-align: justify;
+    font-size: 0.95em; /* Slightly smaller than the default (1em) */
+    line-height: 1.6; /* Improves readability */
+    
 }
 /* Existing CSS remains unchanged, added styles for new sections */
 
@@ -427,11 +431,80 @@ tr:hover {
 .group-experience p{
     text-align: left;
 }
-@media (max-width: 1100px){
-    .flow-diagram-section{
+.flow-diagram-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flow-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.flow-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.flow-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.flow-text ul li {
+    margin-bottom: 10px;
+}
+
+.flow-text ul ul {
+    padding-left: 20px;
+}
+
+.flow-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flow-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for Mobile */
+.mobile-heading {
+    display: none; /* Hidden by default */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flow-diagram-section {
         flex-direction: column;
+        text-align: center;
     }
-    .flow-text, .flow-image{
-        width: 100%;
+
+    .flow-text ul {
+        text-align: left;
+    }
+
+    .flow-image {
+        order: -1; /* Moves the image above text on mobile */
+    }
+
+    .mobile-heading {
+        display: block; /* Show heading on mobile */
     }
 }
