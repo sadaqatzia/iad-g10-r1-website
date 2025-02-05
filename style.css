@@ -376,6 +376,24 @@ img {
 }
 
 /* Responsive styles */
+.close-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none; /* Initially hidden */
+}
+
+@media (max-width: 768px) {
+    .close-button {
+        display: block; /* Show close button in mobile view */
+    }
+    /* Rest of the responsive styles remain the same */
+}
+
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
