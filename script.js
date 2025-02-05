@@ -27,7 +27,13 @@ document.getElementById('toggle-button').addEventListener('click', function() {
     document.getElementById('navlist').classList.toggle('active');
 });
 
+document.getElementById('toggle-button').addEventListener('click', function() {
+    document.getElementById('navlist').classList.add('active');
+});
 
+document.getElementById('close-button').addEventListener('click', function() {
+    document.getElementById('navlist').classList.remove('active');
+});
 // Mobile promo section
 
 const promoPopup = document.getElementsByClassName('promo')[0];
